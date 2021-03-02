@@ -1,10 +1,148 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-    <meta charset="utf-8">
-    <title>portfolio index</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이화민 포트폴리오</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js'></script>
+    <script src="js/main.js"></script>
 </head>
+
 <body>
-    portfolio 리포지토리 생성
+    <header>
+        <h1 id="logo"><a href="index.html"><img src="images/hm_b.png" alt="HM로고"></a></h1>
+        <nav>
+            <ul>
+                <li><a href="">Main</a></li>
+                <li><a href="">About me</a></li>
+                <li><a href="">Portfolio</a></li>
+                <li><a href="">Design</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <article id="page1" class="page">
+            <h1>Web Publisher<br /><span>Portfolio</span></h1>
+        </article>
+        <article id="page2" class="page">
+            <h2 class="blind">About me page</h2>
+            <div class="wrap">
+                <div id="page2_left">
+                    <div id="intro" class="page2_box">
+                        <h3>Introduce Myself</h3>
+                    </div>
+                    <div id="chara" class="page2_box">
+                        <h3>My Character</h3>
+                    </div>
+                </div>
+                <div id="skill" class="page2_box">
+                    <h3>My Skill</h3>
+                </div>
+            </div>
+            <div id="page2_bg"></div>
+        </article>
+        <article id="page3" class="page">
+            <!--             h2.blind+div#pofol$.pofol*4>img+(ul>li)+h3+p+a -->
+            <h2 class="blind">Portfolio page</h2>
+            <div id="pof1" class="pof pof_1">
+                <img src="" alt=""><!-- 메인이미지 -->
+                <ul>
+                    <li>taginner</li>
+                </ul>
+                <h3>제목</h3>
+                <p>내용들어갈곳</p>
+                <a href="">view more</a>
+            </div>
+            <div id="pof2" class="pof pof_2">
+                <img src="" alt="">
+                <ul>
+                    <li>taginner</li>
+                </ul>
+                <h3>제목</h3>
+                <p>내용들어갈곳</p>
+                <a href="">view more</a>
+            </div>
+            <div id="pof3" class="pof pof_hide">
+                <img src="" alt="">
+                <ul>
+                    <li>taginner</li>
+                </ul>
+                <h3>제목</h3>
+                <p>내용들어갈곳</p>
+                <a href="">view more</a>
+            </div>
+            <div id="pof4" class="pof pof_hide">
+                <img src="" alt="">
+                <ul>
+                    <li>taginner</li>
+                </ul>
+                <h3>제목</h3>
+                <p>내용들어갈곳</p>
+                <a href="">view more</a>
+            </div>
+            <div id="pof_page">
+                <a href=""><img src="" alt="이전 페이지"></a>
+                <a href="">1</a>
+                <a href="">2</a>
+                <a href="">3</a>
+                <a href="">4</a>
+                <a href=""><img src="" alt="다음 페이지"></a>
+            </div>
+        </article>
+        <article id="page4" class="page">
+            <h2 class="blind">Design page</h2>
+            <div class="wrap">
+                <div id="filter">
+                    <h3>Filter</h3>
+                    <ul>
+                        <li><a href="">banner</a></li>
+                        <li><a href="">event</a></li>
+                        <li><a href="">other design</a></li>
+                    </ul>
+                </div>
+                <div id="gallery">
+                    <ul>
+                        <li><img src="" alt=""></li>
+                        <li><img src="" alt=""></li>
+                        <li><img src="" alt=""></li>
+                        <li><img src="" alt=""></li>
+                        <li><img src="" alt=""></li>
+                        <li><img src="" alt=""></li>
+                        <li><img src="" alt=""></li>
+                        <li><img src="" alt=""></li>
+                        <li><img src="" alt=""></li>
+                        <li><img src="" alt=""></li>
+                        <li><img src="" alt=""></li>
+                        <li><img src="" alt=""></li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+        <article id="page5" class="page">
+            <h2 class="blind">Contact page</h2>
+            <div id="contact_txt">
+                <div id="contact_txt_inner">
+                    <h3>contact</h3>
+                    <p>e-mail : whchzh1313@gmail.com</p>
+                    <p>tel : 010 - 2055 - 4027</p>
+                </div>
+            </div>
+
+            <div id="contact_txt_bg1" class="contact_txt_bg"></div>
+            <div id="contact_txt_bg2" class="contact_txt_bg"></div>
+            <div id="contact_bg">
+                <div class="wave"></div>
+                <div class="wave"></div>
+            </div>
+        </article>
+    </section>
 </body>
+
 </html>

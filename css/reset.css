@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+body, h1, h2, h3, h4, h5, h6, ul, p, button{
+    margin: 0;
+    padding: 0;
+}
+h1, h2, h3, h4, h5, h6{
+    font-size: 100%;
+    font-weight: 400;
+}
+ul{
+    list-style: none;
+}
+
+a:link, a:visited, a:hover, a:active{
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+img{
+    vertical-align: top;
+    border: none;
+}
+img{
+    max-width: 100%;
+}
+header, section, footer, nav, article{
+    display: block;
+}
