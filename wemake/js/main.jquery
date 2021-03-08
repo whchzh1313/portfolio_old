@@ -1,0 +1,5 @@
+$(function(){
+    $('#top_event_close').click(function(){
+        $('.top_event_bn').css('display','none');
+    });
+});

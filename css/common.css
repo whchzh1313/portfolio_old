@@ -16,6 +16,3 @@ body *{
     overflow: hidden;
     border: none;
 }
-::-webkit-scrollbar{
-    display: none;
-}

@@ -9,25 +9,33 @@
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/common.css" />
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/load.css" />
+
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js'></script>
     <script src="js/main.js"></script>
 </head>
 
 <body>
-    <header>
+    <div id="load_bg">
+        <div id="load_circle">
+            <div class="load_circle"></div>
+            <div class="load_circle"></div>
+        </div>
+    </div>
+    <header id="header">
         <h1 id="logo"><a href="index.html"><img src="images/hm_b.png" alt="HM로고"></a></h1>
-        <nav>
+        <nav id="nav">
             <ul>
-                <li><a href="">Main</a></li>
-                <li><a href="">About me</a></li>
-                <li><a href="">Portfolio</a></li>
-                <li><a href="">Design</a></li>
-                <li><a href="">Contact</a></li>
+                <li><a href="" class="view_page">Main<span></span></a></li>
+                <li><a href="">About me<span></span></a></li>
+                <li><a href="">Portfolio<span></span></a></li>
+                <li><a href="">Design<span></span></a></li>
+                <li><a href="">Contact<span></span></a></li>
             </ul>
         </nav>
     </header>
-    <section>
+    <section id="section">
         <article id="page1" class="page">
             <h1>Web Publisher<br /><span>Portfolio</span></h1>
             <div class="page1_bg"></div>
@@ -39,9 +47,13 @@
                 <div id="page2_left">
                     <div id="intro" class="page2_box">
                         <h3>Introduce Myself</h3>
+                        <p>나이 : 25</p>
+                        <p>성별 : 남</p>
+                        <p>취미 : 게임</p>
                     </div>
                     <div id="chara" class="page2_box">
                         <h3>My Character</h3>
+                        <p>항상 긍정적인 마인드로 맡은 일에 책임감을 다하는것을 중요히 여깁니다.</p>
                     </div>
                 </div>
                 <div id="skill" class="page2_box">
@@ -122,21 +134,22 @@
             <h2 class="blind">Portfolio page</h2>
             <div class="wrap">
                 <div id="pof1" class="pof pof_1 pof_1effect">
-                    <img src="" alt="" class="pof_left"><!-- 메인이미지 -->
+                    <img src="images/wemade.png" alt="위메프 홈페이지" class="pof_left"><!-- 메인이미지 -->
                     <div class="pof_right">
                         <div class="pof_right_top">
                             <ul>
-                                <li>taginner</li>
-                                <li>taginner</li>
+                                <li>고정형</li>
+                                <li>웹 접근성</li>
+                                <li>HTML/CSS</li>
                             </ul>
-                            <h3>제목</h3>
-                            <p>내용들어갈곳</p>
+                            <h3>위메프</h3>
+                            <p>위메프 디자인을 캡처하여 코딩을 완성하였습니다.</p>
                         </div>
-                        <a href="" class="pof_right_bottom">view more</a>
+                        <a href="wemake/index.html" class="pof_right_bottom">view more</a>
                     </div>
                 </div>
                 <div id="pof2" class="pof pof_2 pof_2effect">
-                    <img src="" alt="" class="pof_left">
+                    <img src="images/hrd.png" alt="고용노동부 홈페이지" class="pof_left">
                     <div class="pof_right">
                         <ul>
                             <li>taginner</li>
@@ -147,7 +160,7 @@
                     </div>
                 </div>
                 <div id="pof3" class="pof pof_hide">
-                    <img src="" alt="" class="pof_left">
+                    <img src="hrd/index.html" alt="" class="pof_left">
                     <div class="pof_right">
                         <ul>
                             <li>taginner</li>
@@ -184,31 +197,31 @@
                 <div id="filter">
                     <h3>Filter</h3>
                     <ul>
-                        <li><a href="">banner</a></li>
-                        <li><a href="">event</a></li>
-                        <li><a href="">other design</a></li>
+                        <li><a href="">banner<span></span></a></li>
+                        <li><a href="">event<span></span></a></li>
+                        <li><a href="">other design<span></span></a></li>
                     </ul>
                 </div>
                 <div id="gallery">
                     <ul>
-                        <li class="gal_design"><img src="images/page4/design_01.png" alt="삼성 갤럭시"></li>
-                        <li class="gal_design"><img src="images/page4/design_02.jpg" alt="2020 코리아 세일 페스타"></li>
-                        <li class="gal_event"><img src="images/page4/event_01.png" alt="쿠폰"></li>
-                        <li class="gal_event"><img src="images/page4/event_02.png" alt="성형외과"></li>
-                        <li class="gal_banner"><img src="images/page4/banner_03.png" alt="가장 가깝고 거대한 오븐 Tres tot"></li>
-                        <li class="gal_event"><img src="images/page4/event_03.png" alt="혜택의 끝판왕"></li>
-                        <li class="gal_event"><img src="images/page4/event_07.png" alt="쿠폰"></li>
-                        <li class="gal_design"><img src="images/page4/design_04.jpg" alt="sns 디자인"></li>
-                        <li class="gal_design"><img src="images/page4/design_05.jpg" alt="sns 디자인2"></li>
-                        <li class="gal_design"><img src="images/page4/design_03.jpg" alt="신세계몰"></li>
-                        <li class="gal_event"><img src="images/page4/event_04.png" alt="믿고보는 내돈내산"></li>
-                        <li class="gal_event"><img src="images/page4/event_06.png" alt="70% 아리따움 아울렛"></li>
-                        <li class="gal_event"><img src="images/page4/event_05.png" alt="앱다운 적립금"></li>
-                        <li class="gal_banner"><img src="images/page4/banner_01.png" alt="트윈 크레페 피자 주문시 도미노 50% 할인">
+                        <li class="gal_content gal_design gal_show"><img src="images/page4/design_01.png" alt="삼성 갤럭시"></li>
+                        <li class="gal_content gal_design gal_show"><img src="images/page4/design_02.jpg" alt="2020 코리아 세일 페스타"></li>
+                        <li class="gal_content gal_event gal_show"><img src="images/page4/event_01.png" alt="쿠폰"></li>
+                        <li class="gal_content gal_event gal_show"><img src="images/page4/event_02.png" alt="성형외과"></li>
+                        <li class="gal_content gal_banner gal_show"><img src="images/page4/banner_03.png" alt="가장 가깝고 거대한 오븐 Tres tot"></li>
+                        <li class="gal_content gal_event gal_show"><img src="images/page4/event_03.png" alt="혜택의 끝판왕"></li>
+                        <li class="gal_content gal_event gal_show"><img src="images/page4/event_07.png" alt="쿠폰"></li>
+                        <li class="gal_content gal_design gal_show"><img src="images/page4/design_04.jpg" alt="sns 디자인"></li>
+                        <li class="gal_content gal_design"><img src="images/page4/design_05.jpg" alt="sns 디자인2"></li>
+                        <li class="gal_content gal_design"><img src="images/page4/design_03.jpg" alt="신세계몰"></li>
+                        <li class="gal_content gal_event"><img src="images/page4/event_04.png" alt="믿고보는 내돈내산"></li>
+                        <li class="gal_content gal_event"><img src="images/page4/event_06.png" alt="70% 아리따움 아울렛"></li>
+                        <li class="gal_content gal_event"><img src="images/page4/event_05.png" alt="앱다운 적립금"></li>
+                        <li class="gal_content gal_banner"><img src="images/page4/banner_01.png" alt="트윈 크레페 피자 주문시 도미노 50% 할인">
                         </li>
-                        <li class="gal_banner"><img src="images/page4/banner_02.png" alt="꿀 연휴를 부탁해! 매일 오전 11시 꿀 혜택 쿠폰">
+                        <li class="gal_content gal_banner"><img src="images/page4/banner_02.png" alt="꿀 연휴를 부탁해! 매일 오전 11시 꿀 혜택 쿠폰">
                         </li>
-                        <li class="gal_event"><img src="images/page4/event_08.png" alt="최대 1만원 할인을 너에게로 토스"></li>
+                        <li class="gal_content gal_event"><img src="images/page4/event_08.png" alt="최대 1만원 할인을 너에게로 토스"></li>
                     </ul>
                 </div>
             </div>

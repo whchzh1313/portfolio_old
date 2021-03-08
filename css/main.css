@@ -1,5 +1,7 @@
 @charset "UTF-8";
-
+::-webkit-scrollbar{
+    display: none;
+}
 header {
     position: fixed;
     width: 100%;
@@ -8,12 +10,13 @@ header {
     min-width: 800px;
 }
 body{
-    
     position: relative;
     z-index: -1000;
+    overflow-y: hidden;
 }
 section {
     position: relative;
+    width: 500vw;
     z-index: -1000;
 }
 
@@ -47,14 +50,45 @@ nav>ul>li>a {
     font-family: "Nanum Pen Script";
     font-weight: 400;
 }
+#nav .view_page{
+    color: #fff;
+    position: relative;
+}
+#nav .view_page span{
+    display: block;
+    position: absolute;
+    width: 50%;
+    height: 6px;
+    background-color: #fff;
+    border-radius: 3px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#nav .view_page_orange{
+    color: #fd7400;
+    position: relative;
+}
+#nav .view_page_orange span{
+    display: block;
+    position: absolute;
+    width: 50%;
+    height: 6px;
+    background-color: #fd7400;
+    border-radius: 3px;
+    left: 50%;
+    transform: translateX(-50%);
+}
 
 .page {
     position: relative;
     width: 100vw;
+    min-width: 1400px;
     height: 100vh;
     font-family: "Nanum Pen Script";
     font-weight: 400;
     z-index: -100;
+    float: left;
+    overflow: hidden;
 }
 
 /* page1 */
@@ -166,6 +200,13 @@ nav>ul>li>a {
     padding: 10px 30px;
 }
 
+#page2 h3 {
+    font-size: 30px;
+    height: 30px;
+}
+#page2 #page2_left p{
+    font-size: 22px;
+}
 #page2 #intro {
     width: 400px;
     height: 300px;
@@ -189,7 +230,7 @@ nav>ul>li>a {
     z-index: -10;
     width: 100%;
     height: 100%;
-    background: url(../images/about_bg.png) no-repeat center center;
+    background: url("../images/about_bg.png") no-repeat center center;
     background-size: 1560px 840px;
 }
 
@@ -240,10 +281,6 @@ nav>ul>li>a {
     transform: rotate(3deg);
 }
 
-#page2 h3 {
-    font-size: 26px;
-    height: 30px;
-}
 #page2 #skill_bg{
     position: relative;
     display: flex;
@@ -480,9 +517,10 @@ nav>ul>li>a {
 } 
 
 #page3 .pof_1 .pof_left{
+    display: block;
+    position: relative;
     width: 370px;
     height: 500px;
-    background: #666;
 }
 
 #page3 .pof_1 .pof_right{
@@ -507,6 +545,7 @@ nav>ul>li>a {
     background: #ffa629;
     padding: 0 8px;
     margin-right: 10px;
+    margin-bottom: 4px;
     line-height: 20px;
     color: #fff;
     font-family: "Nanum Gothic";
@@ -568,9 +607,9 @@ nav>ul>li>a {
 }
 
 #page4 .wrap {
-    width: 1350px;
+    width: 1374px;
     margin: 0 auto;
-    padding-top: 130px;
+    padding-top: 100px;
 }
 
 #page4 #filter h3 {
@@ -587,11 +626,34 @@ nav>ul>li>a {
     margin: 0 20px 0 0;
     font-size: 20px;
 }
-
-#page4 #gallery ul {
-    height: 650px;
+#page4 #filter ul li a.view_page{
+    color: #fd7400;
+    position: relative;
 }
-
+#page4 #filter ul li a.view_page span{
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 6px;
+    background-color: #fd7400;
+    border-radius: 3px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#page4 #gallery ul {
+    height: 674px;
+    overflow: hidden;
+    padding: 12px;
+}
+.gal_content{
+    display: none;
+}
+.gal_show{
+    display: block;
+}
+#page4 #gallery ul li.gal_mr{
+    margin-right: 0;
+}
 #page4 #gallery ul li {
     float: left;
     width: 300px;
@@ -600,8 +662,9 @@ nav>ul>li>a {
     background: #fff;
     position: relative;
     padding: 20px;
-
 }
+
+/* transition: all .4s; */
 #page4 #gallery ul li img{
     width: 260px;
     height: 260px;
@@ -612,14 +675,6 @@ nav>ul>li>a {
     width: 260px;
     height: auto;
     vertical-align: middle;
-}
-
-#page4 #gallery ul li:nth-child(4n+4) {
-    margin-right: 0;
-}
-
-#page4 #gallery ul li:nth-child(n+9) {
-    display: none;
 }
 
 #page4 #gallery ul li::after {
@@ -660,7 +715,7 @@ nav>ul>li>a {
 }
 
 #page5 .wave {
-    background: url(../images/wave2.svg) repeat-x;
+    background: url("../images/wave2.svg") repeat-x;
     position: absolute;
     bottom: 0;
     width: 6400px;
@@ -670,7 +725,7 @@ nav>ul>li>a {
 }
 
 #page5 .wave:nth-of-type(2) {
-    background: url(../images/wave.svg) repeat-x;
+    background: url("../images/wave.svg") repeat-x;
     bottom: -25px;
     animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
     opacity: 1;
@@ -745,4 +800,3 @@ nav>ul>li>a {
     top: 120px;
     left: calc(50% - 240px);
 }
-p
