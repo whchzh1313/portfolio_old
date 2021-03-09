@@ -11,8 +11,6 @@ $(document).ready(function () {
         }, 1400);
     }
     loadEvent();
-    _gallery.find('li').eq(3).addClass('gal_mr');
-    _gallery.find('li').eq(7).addClass('gal_mr');
 
     // 1] nav li 클릭시 page 이동 = margin-left - i"00vw"
     var _navBtn = $('#nav ul li a');
@@ -87,34 +85,26 @@ $(document).ready(function () {
         e.preventDefault();
         console.log($(this).children());
         if ($(this).index() === 0) {
-            _gallery.find('li').fadeOut(600, function() {
-                _gallery.find('li').removeClass('gal_mr')
-            }).delay(800).siblings('.gal_banner').fadeIn(600, function () {
-                _gallery.find('.gal_banner').eq(3).addClass('gal_mr');
-            });
-            
-
-        } else if ($(this).index() === 1) {
-            _gallery.find('li').fadeOut(600, function() {
-                _gallery.find('li').removeClass('gal_mr')
-            }).delay(800).siblings('.gal_event').fadeIn(600, function () {
-                _gallery.find('.gal_event').eq(3).addClass('gal_mr');
-            });
-            
-
-        } else if ($(this).index() === 2) {
-            _gallery.find('li').fadeOut(600, function() {
+            _gallery.find('li').delay(600).stop().fadeOut(600, function () {
                 _gallery.find('li').removeClass('gal_mr');
-            }).delay(800).siblings('.gal_design').fadeIn(600, function () {
-                _gallery.find('.gal_design').eq(3).addClass('gal_mr');
+                _gallery.find('li').siblings('.gal_banner').eq(3).addClass('gal_mr');
+                _gallery.find('li').siblings('.gal_banner').eq(7).addClass('gal_mr');
+                _gallery.find('li').siblings('.gal_banner').delay(600).stop().fadeIn(600);
             });
-            
-
-        }
-
-        function galleryMr() {
-           eq(3).addClass('gal_mr');
-           eq(7).addClass('gal_mr');
+        } else if ($(this).index() === 1) {
+            _gallery.find('li').delay(600).stop().fadeOut(600, function () {
+                _gallery.find('li').removeClass('gal_mr');
+                _gallery.find('li').siblings('.gal_event').eq(3).addClass('gal_mr');
+                _gallery.find('li').siblings('.gal_event').eq(7).addClass('gal_mr');
+                _gallery.find('li').siblings('.gal_event').delay(600).stop().fadeIn(600);
+            });
+        } else if ($(this).index() === 2) {
+            _gallery.find('li').delay(600).stop().fadeOut(600, function () {
+                _gallery.find('li').removeClass('gal_mr');
+                _gallery.find('li').siblings('.gal_design').eq(3).addClass('gal_mr');
+                _gallery.find('li').siblings('.gal_design').eq(7).addClass('gal_mr');
+                _gallery.find('li').siblings('.gal_design').delay(600).stop().fadeIn(600);
+            });
         }
 
 
