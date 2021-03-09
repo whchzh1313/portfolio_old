@@ -85,25 +85,25 @@ $(document).ready(function () {
         e.preventDefault();
         console.log($(this).children());
         if ($(this).index() === 0) {
-            _gallery.find('li').delay(600).stop().fadeOut(600, function () {
+            _gallery.find('li').fadeOut(600, function () {
                 _gallery.find('li').removeClass('gal_mr');
                 _gallery.find('li').siblings('.gal_banner').eq(3).addClass('gal_mr');
                 _gallery.find('li').siblings('.gal_banner').eq(7).addClass('gal_mr');
-                _gallery.find('li').siblings('.gal_banner').delay(600).stop().fadeIn(600);
+                _gallery.find('li').siblings('.gal_banner').stop().delay(600).fadeIn(600);
             });
         } else if ($(this).index() === 1) {
-            _gallery.find('li').delay(600).stop().fadeOut(600, function () {
+            _gallery.find('li').fadeOut(600, function () {
                 _gallery.find('li').removeClass('gal_mr');
                 _gallery.find('li').siblings('.gal_event').eq(3).addClass('gal_mr');
                 _gallery.find('li').siblings('.gal_event').eq(7).addClass('gal_mr');
-                _gallery.find('li').siblings('.gal_event').delay(600).stop().fadeIn(600);
+                _gallery.find('li').siblings('.gal_event').stop().delay(600).fadeIn(600);
             });
         } else if ($(this).index() === 2) {
-            _gallery.find('li').delay(600).stop().fadeOut(600, function () {
+            _gallery.find('li').fadeOut(600, function () {
                 _gallery.find('li').removeClass('gal_mr');
                 _gallery.find('li').siblings('.gal_design').eq(3).addClass('gal_mr');
                 _gallery.find('li').siblings('.gal_design').eq(7).addClass('gal_mr');
-                _gallery.find('li').siblings('.gal_design').delay(600).stop().fadeIn(600);
+                _gallery.find('li').siblings('.gal_design').stop().delay(600).fadeIn(600);
             });
         }
 
