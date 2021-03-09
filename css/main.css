@@ -645,12 +645,6 @@ nav>ul>li>a {
     overflow: hidden;
     padding: 12px;
 }
-.gal_content{
-    display: none;
-}
-.gal_show{
-    display: block;
-}
 #page4 #gallery ul li.gal_mr{
     margin-right: 0;
 }
