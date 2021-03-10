@@ -79,34 +79,76 @@ $(document).ready(function () {
     });
     // 2] page2 화면 생성이펙트
     // 3] page3 포트폴리오 페이지 이동
-
-    // 4] page4 design 필터에 따라 보여지는 이미지 교체
-    _filter.on('click', function (e) {
+    var pofIdx = 1;
+    var pofContent = $('#page3 > .wrap > .pof');
+    $('#pof_page a').on('click', function (e) {
         e.preventDefault();
-        console.log($(this).children());
-        if ($(this).index() === 0) {
-            _gallery.find('li').fadeOut(600, function () {
-                _gallery.find('li').removeClass('gal_mr');
-                _gallery.find('li').siblings('.gal_banner').eq(3).addClass('gal_mr');
-                _gallery.find('li').siblings('.gal_banner').eq(7).addClass('gal_mr');
-                _gallery.find('li').siblings('.gal_banner').stop().delay(600).fadeIn(600);
-            });
-        } else if ($(this).index() === 1) {
-            _gallery.find('li').fadeOut(600, function () {
-                _gallery.find('li').removeClass('gal_mr');
-                _gallery.find('li').siblings('.gal_event').eq(3).addClass('gal_mr');
-                _gallery.find('li').siblings('.gal_event').eq(7).addClass('gal_mr');
-                _gallery.find('li').siblings('.gal_event').stop().delay(600).fadeIn(600);
-            });
-        } else if ($(this).index() === 2) {
-            _gallery.find('li').fadeOut(600, function () {
-                _gallery.find('li').removeClass('gal_mr');
-                _gallery.find('li').siblings('.gal_design').eq(3).addClass('gal_mr');
-                _gallery.find('li').siblings('.gal_design').eq(7).addClass('gal_mr');
-                _gallery.find('li').siblings('.gal_design').stop().delay(600).fadeIn(600);
-            });
+        if ($(this).index() === 0 && pofIdx > 1) {
+            pofIdx--
+        }else if ($(this).index() === 1) {
+            pofIdx = 1;
+        }else if ($(this).index() === 2) {
+            pofIdx = 2;
+        }else if ($(this).index() === 3) {
+            pofIdx = 3;
+        }else if ($(this).index() === 4) {
+            pofIdx = 4;
+        }else if ($(this).index() === 5 && pofIdx < 4) {
+            pofIdx++
         }
+        console.log(pofIdx);
+        $('#pof_page a').removeClass('on');
+        $('#pof_page a').eq(pofIdx).addClass('on');
+        
+        if (pofIdx === 1){
+            pofContent.removeClass('pof_1 pof_2 pof_hide');
+            $('#pof3').addClass('pof_hide').removeClass('pof_1effect pof_2effect');
+            $('#pof4').addClass('pof_hide').removeClass('pof_1effect pof_2effect');
+            $('#pof5').addClass('pof_hide').removeClass('pof_1effect pof_2effect');
+            $('#pof1').addClass('pof_1 pof_1effect');
+            $('#pof2').addClass('pof_2 pof_2effect');
+            
+        }else if (pofIdx === 2){
+            pofContent.removeClass('pof_1 pof_2 pof_hide');
+            $('#pof1').addClass('pof_hide').removeClass('pof_1effect pof_2effect');
+            $('#pof4').addClass('pof_hide').removeClass('pof_1effect pof_2effect');
+            $('#pof5').addClass('pof_hide').removeClass('pof_1effect pof_2effect');
+            $('#pof2').addClass('pof_1 pof_1effect');
+            $('#pof3').addClass('pof_2 pof_2effect');
+        }else if (pofIdx === 3){
+            pofContent.removeClass('pof_1 pof_2 pof_hide');
+            $('#pof1').addClass('pof_hide').removeClass('pof_1effect pof_2effect');
+            $('#pof2').addClass('pof_hide').removeClass('pof_1effect pof_2effect');
+            $('#pof5').addClass('pof_hide').removeClass('pof_1effect pof_2effect');
+            $('#pof3').addClass('pof_1 pof_1effect');
+            $('#pof4').addClass('pof_2 pof_2effect');
+        }else if (pofIdx === 4){
+            pofContent.removeClass('pof_1 pof_2 pof_hide');
+            $('#pof1').addClass('pof_hide').removeClass('pof_1effect pof_2effect');
+            $('#pof2').addClass('pof_hide').removeClass('pof_1effect pof_2effect');
+            $('#pof3').addClass('pof_hide').removeClass('pof_1effect pof_2effect');
+            $('#pof4').addClass('pof_1 pof_1effect');
+            $('#pof5').addClass('pof_2 pof_2effect');
+            
+        }
+    });
+    /* 
+        .pof_1 포트폴리오 왼쪽
+        .pof_2 포트폴리오 오른쪽 사진만 보이는것
+        .pof_hide 포트폴리오 숨기기
+        #pof_page 의 a로 이동
+     */
+    // 4] page4 design 필터에 따라 보여지는 이미지 교체
 
+        _filter.children().on('click', function (e) {
+            e.preventDefault();
+            var viewItem = $(this).attr('href');
+            console.log(viewItem);
+            _gallery.find('li').fadeOut();
+            _gallery.find(viewItem).each(function (idx) {
+                console.log($(this));
+                $(this).stop().delay(idx*200 + 1000).fadeIn(400);
+            });
 
         _filter.children().removeClass('view_page');
         $(this).children().addClass('view_page');

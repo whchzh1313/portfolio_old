@@ -543,8 +543,8 @@ nav>ul>li>a {
     height: 20px;
     border-radius: 10px;
     background: #ffa629;
-    padding: 0 8px;
-    margin-right: 10px;
+    padding: 0 7px;
+    margin-right: 6px;
     margin-bottom: 4px;
     line-height: 20px;
     color: #fff;
@@ -641,18 +641,16 @@ nav>ul>li>a {
     transform: translateX(-50%);
 }
 #page4 #gallery ul {
+    display: flex;
+    flex-wrap: wrap;
     height: 674px;
     overflow: hidden;
     padding: 12px;
 }
-#page4 #gallery ul li.gal_mr{
-    margin-right: 0;
-}
 #page4 #gallery ul li {
-    float: left;
     width: 300px;
     height: 300px;
-    margin: 0 50px 50px 0;
+    margin: 0 18px 50px;
     background: #fff;
     position: relative;
     padding: 20px;
