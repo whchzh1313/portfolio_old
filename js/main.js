@@ -12,6 +12,7 @@ $(document).ready(function () {
     }
     loadEvent();
 
+    $('#page2').find('p').fadeOut();
     // 1] nav li 클릭시 page 이동 = margin-left - i"00vw"
     var _navBtn = $('#nav ul li a');
     var pageIdx
@@ -45,6 +46,10 @@ $(document).ready(function () {
                 makeViewPage();
             } else if (pageIdx === 1) {
                 makeViewPageOrange();
+                $('#page2').find('p').each(function (idx) {
+                    console.log($(this));
+                    $(this).stop().delay(idx*300 + 2000).fadeIn(400);
+                });
             } else if (pageIdx === 2) {
                 makeViewPage();
             } else if (pageIdx === 3) {
