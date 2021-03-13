@@ -18,6 +18,7 @@ body{
 section {
     position: relative;
     width: 500vw;
+    min-width: 7000px;
     z-index: -1000;
 }
 
@@ -130,7 +131,7 @@ nav>ul>li>a {
     }
 }
 #page1>h1 {
-    font-size: 7vw;
+    font-size: 130px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -141,7 +142,7 @@ nav>ul>li>a {
 #page1>h1::after,
 #page1>h1::before {
     content: "Web Publisher";
-    font-size: 7vw;
+    font-size: 130px;
     position: absolute;
     top: 0;
     left: 0;
@@ -163,7 +164,7 @@ nav>ul>li>a {
 #page1>h1>span::after,
 #page1>h1>span::before {
     content: "Portfolio";
-    font-size: 7vw;
+    font-size: 130px;
     position: absolute;
     left: 0;
 }
@@ -179,7 +180,13 @@ nav>ul>li>a {
     color: #fd7400;
     z-index: -2;
 }
-
+#page1 p {
+    position: absolute;
+    left: 50px;
+    bottom: 50px;
+    color: #fff;
+    font-size: 24px;
+}
 /* page2 */
 
 #page2 {
@@ -778,13 +785,14 @@ nav>ul>li>a {
 
 #page5 #contact_txt {
     width: 520px;
-    height: 520px;
-    margin: 0 auto;
+    height: 320px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -60%) skew(-6deg);
     padding: 20px;
     background-color: #fff7dd;
     box-sizing: border-box;
-    transform: skew(-6deg);
-    position: relative;
 }
 
 /* #page5 #contact_txt #contact_txt_inner{
@@ -799,27 +807,38 @@ nav>ul>li>a {
     margin: 10px 0;
     font-size: 20px;
 }
-
+#page5 #contact_txt #contact_txt_inner p.contact_txt_last{
+    line-height: 144px;
+}
+#page5 #contact_txt #contact_txt_inner p img{
+    margin: 0 auto;
+    width: 144px;
+    height: 144px;
+    transform: scale(.6) skew(6deg);
+}
+#page5 #contact_txt #contact_txt_inner p.contact_txt_last a{
+    font-size: 24px;
+}
 #page5 .contact_txt_bg {
     position: absolute;
     width: 520px;
-    height: 520px;
+    height: 320px;
     top: 0;
     z-index: -2;
 }
-#page5 #contact_txt_inner * {
+#page5 #contact_txt_inner h3,#page5 #contact_txt_inner p {
     border-bottom: 2px solid #ffd396;
 }
 #page5 #contact_txt_bg1 {
     background: #ffcf8c;
-    top: 120px;
+    top: 50%;
     left: calc(50% - 240px);
-    transform: skew(-6deg) rotate(-1deg);
+    transform: translateY(-60%) skew(-6deg) rotate(-1deg);
 }
 
 #page5 #contact_txt_bg2 {
     border: 3px solid #ffa629;
-    transform: skew(-6deg) rotate(3deg);
-    top: 120px;
+    transform: translateY(-60%) skew(-6deg) rotate(3deg);
+    top: 50%;
     left: calc(50% - 240px);
 }

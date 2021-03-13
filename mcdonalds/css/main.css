@@ -1,0 +1,500 @@
+@charset "UTF-8";
+
+*{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+
+    font-family: "Noto Sans KR", "맑은 고딕";
+    color: #333;
+}
+body{   
+    background-color: #fafafa;
+}
+.text_hide{
+    font-size: 0;
+}
+#skip a{
+    position: fixed;
+    top: -50px;
+    left: 0;
+}
+#skip a:focus{
+    top: 0;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    background-color: #f2ac12;
+    font-size: 20px;
+    line-height: 50px;
+}
+#header{
+    position: relative;
+    width: 100%;
+    height: 140px;
+}
+#headerBg{
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    left: 0;
+    top: 0;
+    height: 140px;
+    /* #gnb > ul > li > a : hover = height: 520px; */
+    overflow: hidden;
+    background-color: #fff;
+}
+#headerBg.active{
+    height: 520px;
+}
+#headerWrap{
+    width: 1168px;
+    height: inherit;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+#headerWrap > *{
+    float: left;
+}
+#headerWrap > h1 {
+    width: 106px;
+    height: 140px;
+    align-items: center;
+    margin-right: 180px;
+}
+#headerWrap > h1 > a{
+    display: block;
+    line-height: 140px;
+}
+#headerWrap > h1 > a > img{
+    vertical-align: middle;
+}
+#gnb{
+    width: 640px;
+    height: inherit;
+    font-weight: 900;
+    font-size: 18px;
+}
+#gnb > ul{
+    display: flex;
+    justify-content: space-around;
+}
+#headerBg.active #gnb > ul::after,#headerBg.active #gnb > ul::before{
+    content: "";
+    position: absolute;
+    width: 1920px;
+    left: 0;
+}
+#headerBg.active #gnb > ul::after{
+    top: 140px;
+    background: #ebebeb;
+    height: 1px;
+}
+#headerBg.active #gnb > ul::before{
+    top: 518px;
+    height: 2px;
+    background-color: #fdd56c;
+}
+#gnb > ul li{
+    width: 160px;
+}
+#gnb > ul > li > a{
+    display: inline-block;
+    position: relative;
+    height: 140px;
+    line-height: 140px;
+}
+#gnb > ul > li > a.on::after{
+    content: "";
+    position: absolute;
+    z-index: 3;
+    top: 140px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% + 16px);
+    height: 3px;
+    background-color: #ffbc0d;
+}
+#gnb > ul ul{
+    font-size: 16px;
+    padding-top: 16px;
+}
+#gnb > ul ul > li{
+    height: 54px;
+    padding-top: 10px;
+    line-height: 36px;
+}
+#gnb > ul ul > li > a{
+    display: inline-block;
+    color: #828282;
+    height: 36px;
+    font-weight: 500;
+}
+#gnb > ul ul > li > a:hover,#gnb > ul ul > li > a:focus{
+    color: #000000;
+    border-bottom: 1px solid #000000;
+}
+#util{
+    width: 228px;
+    height: 140px;
+    padding-top: 52px;
+    line-height: 140px;
+    font-weight: 900;
+    font-size: 12px;
+}
+#util button{
+    float: left;
+}
+#util .util_btn{
+    width: 80px;
+    height: 36px;
+    text-align: center;
+    color: #fff;
+    border-radius: 18px;
+}
+#util .util_btn:first-child{
+    background-color: #f2ac12;
+    margin-right: 3px;
+}
+#util .util_btn:nth-child(2){
+    background-color: #264a36;
+}
+/* 검색 모달버튼 */
+#util button:nth-child(3){
+    margin-left: 29px;
+    width: 36px;
+    height: 36px;
+    background: url("../images/ico_search.png") no-repeat;
+}
+
+#header.fixed #headerBg{
+    height: 80px;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+}
+
+#header.fixed #headerBg.active{
+    height: 460px;
+}
+#header.fixed #headerWrap{
+    height: 80px;
+    line-height: 80px;
+}
+#header.fixed #headerWrap > h1 {
+    width: 106px;
+    height: 45px;
+    align-items: center;
+    margin-right: 180px;
+}
+#header.fixed #headerWrap > h1 > a{
+    width: 51px;
+    display: block;
+    line-height: 80px;
+}
+#header.fixed #gnb > ul > li > a{
+    display: inline-block;
+    position: relative;
+    height: 80px;
+    line-height: 80px;
+}
+#header.fixed #util{
+    width: 228px;
+    height: 80px;
+    padding-top: 22px;
+    line-height: 80px;
+    font-weight: 900;
+    font-size: 12px;
+}
+#header.fixed #headerBg.active #gnb > ul::after{
+    top: 80px;
+    background: #ebebeb;
+    height: 1px;
+}
+#header.fixed #gnb > ul > li > a.on::after{
+    content: "";
+    position: absolute;
+    z-index: 3;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% + 16px);
+    height: 3px;
+    background-color: #ffbc0d;
+}
+#header.fixed #headerBg.active #gnb > ul::before{
+    top: 458px;
+    height: 2px;
+    background-color: #fdd56c;
+}
+
+#slide{
+    position: relative;
+    width: 100%;
+    height: 540px;
+    overflow: hidden;
+}
+#slide #slideImg{
+    width: 300%;
+    
+}
+#slide #slideImg li{
+    float: left;
+}
+#slide .slide_control{
+    position: absolute;
+}
+#slide #slidePrev,#slide #slideNext{
+    top: 50%;
+    transform: translateY(-50%);
+    width: 90px;
+    height: 90px;
+    
+}
+#slide #slidePrev{
+    left: 0;
+    background: url("../images/bg_swiper_new.png") no-repeat;
+}
+#slide #slideNext{
+    right: 0;
+    background: url("../images/bg_swiper_new.png") no-repeat left bottom;
+}
+
+#slide #slideTimer{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 12px;
+}
+#slide #slideTimer > #slideTimerBar{
+    width: 300px;
+    height: 6px;
+    border-radius: 3px;
+    overflow: hidden;
+    margin: 15px 0;
+    background-color: #fff;
+    float: left;
+}
+#slide #slideTimer > #slideTimerBar > #slideOrangeBar{
+    background-color: #f2ac12;
+    width: 0;
+    height: 6px;
+}
+#slide #slideStoper{
+    width: 36px;
+    height: 36px;
+    background: url("../images/bg_swiper_new.png") no-repeat -92px -36px;
+    margin-right: 30px;
+    font-size: 0;
+    float: left;
+}
+#slide #slideStoper.play{
+    background: url("../images/bg_swiper_new.png") no-repeat -92px -36px;
+}
+#slide #slideStoper.pause{
+    background: url("../images/bg_swiper_new.png") no-repeat -92px 0px;
+}
+
+#notice{
+    position: relative;
+    width: 1168px;
+    margin: 0 auto;/* jquery 로 조정 #noticeViewMore 클릭시 946px 씩 늘어나게 + class 호출해서 fadeIn*/
+}
+#notice h2{
+    margin-top: 33px;
+    margin-bottom: 67px;
+    height: 30px;
+    line-height: 30px;
+    font-weight: 900;
+    font-size: 30px;
+}
+#notice #noticeCover{
+    width: 100%;
+}
+#notice ul{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+#notice ul li{
+    width: 366px;
+    height: 438px;
+    border-radius: 9px;
+    box-shadow: 1px 1px 4px rgba(180, 180, 180, .3);
+    margin-bottom: 35px;
+}
+#notice ul li.no_effect{
+    box-shadow: none;
+}
+#notice ul li>a{
+    width: 366px;
+    height: 438px;
+}
+#notice ul li > a > img{
+    height: 300px;
+}
+#notice ul li > a > span{
+    padding: 30px;
+    font-size: 18px;
+    font-weight: 700;
+    word-break: keep-all;
+    
+}
+#notice ul li > a > img,#notice ul li > a > span{
+    display: block;
+}
+#notice #noticeViewMore{
+    display: block;
+    width: 90px;
+    height: 90px;
+    border-radius: 45px;
+    background: url("../images/btn_more.png") no-repeat;
+    margin: 33px auto;
+}
+
+/* script 제어영역 */
+.hide_notice0{
+    display: none;
+}
+.hide_notice1{
+    display: none;
+}
+#notice #quickMenu{
+    position: fixed;
+    height: 180px;
+    right: calc(50% - 716px);
+    bottom: 50px;
+}
+#notice #quickMenu a:first-child{
+    display: block;
+    width: 110px;
+    height: 113px;
+}
+#notice #quickMenu a:nth-child(2){
+    display: block;
+    width: 43px;
+    height: 26px;
+    margin-left: 19px;
+    margin-top: 40px;
+}
+
+#notice #quickMenu.quick_absolute{
+    position: absolute;
+    right: calc(50% - 716px);
+    bottom: 50px;
+}
+#notice #quickMenu.quick_absolute a:first-child{
+    display: block;
+    width: 110px;
+    height: 113px;
+}
+#notice #quickMenu.quick_absolute a:nth-child(2){
+    display: block;
+    width: 43px;
+    height: 26px;
+    margin-left: 19px;
+    margin-top: 40px;
+}
+
+#footer {
+    background: #292929;
+}
+#footer .foot_wrap{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 1168px;
+    padding-top: 35px;
+    height: 257px;
+    margin: 0 auto;
+}
+#footer .foot_wrap #foot_left li,#footer .foot_wrap #foot_mid li{
+    height: 16px;
+    margin-bottom: 13px;
+}
+#footer #foot_left{
+    width: 190px;
+}
+#footer #foot_left li:first-child a{
+    color: #fff21b;
+    line-height: 16px;
+}
+#footer #foot_left a{
+    color: #fafafa;
+    font-weight: 700;
+}   
+#footer #foot_mid{
+    width: 788px;
+}
+#footer #foot_mid li{
+    color: #9c9c9c;
+
+}
+#footer > .foot_wrap > a{
+    display: block;
+    width: 100px;
+    height: 61px;
+}
+#footer #sns{
+    position: absolute;
+    top: 45px;
+    right: 120px;
+    width: 220px;
+    display: flex;
+    justify-content: space-between;
+}
+#footer #sns>li >a{
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+#footer #sns > li:nth-child(1) > a{background: url("../images/ico_sns.png") no-repeat 0 0;}
+#footer #sns > li:nth-child(2) > a{background: url("../images/ico_sns.png") no-repeat 0 -40px;}
+#footer #sns > li:nth-child(3) > a{background: url("../images/ico_sns.png") no-repeat 0 -80px;}
+#footer #sns > li:nth-child(4) > a{background: url("../images/ico_sns.png") no-repeat 0 -120px;}
+
+/* 서치 모달 */
+#search.active{
+    position: fixed;
+    left: 0;top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,.8);
+    z-index: 1000;
+    padding-top: 395px;
+}
+#search.active > form{
+    width: 1168px;
+    height: 70px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+#search.active > form > input{
+    border-radius: 35px;
+    font-size: 15px;
+    font-weight: 500;
+}
+#search.active > form > input:first-child {
+    display: block;
+    width: 984px;
+    height: 70px;
+    background-color: #fff;
+    border: 1px solid #d1d1d1;
+    padding-left: 40px;
+}
+#search.active > form > input:nth-child(2){
+    width: 172px;
+    height: 70px;
+    background-color: #ffbc0d;
+    border: none;
+}
+#search.active > button{
+    display: block;
+    width: 90px;
+    height: 90px;
+    margin: 140px auto;
+    background: url("../images/btn_close.png") no-repeat;
+}

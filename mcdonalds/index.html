@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:regular,500,600,700,900" rel="stylesheet" />
+    <title>맥도날드</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js'></script>
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <div id="top"></div>
+    <div id="skip"><a href="#content">본문 바로가기</a></div>
+    <header id="header">
+        <div id="headerBg">
+            <div id="headerWrap">
+                <!-- (h1>a)+(nav>ul>li*4>a+ul>li>a)+button[type="button"] -->
+                <h1><a href="#"><img src="images/logo.png" alt="맥도날드"></a></h1>
+                <nav id="gnb">
+                        <ul id="gnbCont">
+                            <li>
+                                <a href="">Menu</a>
+                                <ul>
+                                    <li><a href="">버거</a></li>
+                                    <li><a href="">맥런치</a></li>
+                                    <li><a href="">맥모닝</a></li>
+                                    <li><a href="">사이드 & 디저트</a></li>
+                                    <li><a href="">맥카페 & 음료</a></li>
+                                    <li><a href="">해피밀</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="">Store</a>
+                                <ul>
+                                    <li><a href="">매장찾기</a></li>
+                                    <li><a href="">맥딜리버리</a></li>
+                                    <li><a href="">맥드라이브</a></li>
+                                    <li><a href="">임차문의</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="">What's New</a>
+                                <ul>
+                                    <li><a href="">프로모션</a></li>
+                                    <li><a href="">새로운 소식</a></li>
+                                    <li><a href="">주방공개의 날</a></li>
+                                    <li><a href="">이달의 해피밀</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="">Story</a>
+                                <ul>
+                                    <li><a href="">브랜드 소개</a></li>
+                                    <li><a href="">사회적 책임과 지원</a></li>
+                                    <li><a href="">맥도날드 경쟁력</a></li>
+                                    <li><a href="">맥도날드 사람들</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                </nav>
+                <div id="util">
+                    <button type="button" class="util_btn">RECRUIT</button>
+                    <button type="button" class="util_btn">ENG</button>
+                    <button type="button" id="search_modal" class="text_hide">검색</button>
+                </div>
+            </div>
+        </div>
+        <div id="search">
+            <form action="index.html">
+                <input type="text" placeholder="매장 또는 메뉴정보를 검색하실 수 있습니다."/>
+                <input type="button" value="검색하기" />
+            </form>
+            <button type="button" id="btnSearchClose" class="text_hide">검색 끄기</button>
+        </div>
+    </header>
+    <section id="content">
+        <div id="slide">
+            <ul id="slideImg">
+                <li>
+                    <a href="#">
+                        <img src="images/1613634424371.png" alt="취향존중 버거할인 맥런치가 돌아왔다!">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/1611033752304.png" alt="매일마시는 커피, 매일맛있는 커피로!">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/1610891347150.png" alt="겨울에 더 달콤한 한 잔!">
+                    </a>
+                </li>
+            </ul>
+            <button type="button" class="text_hide slide_control" id="slidePrev"
+            >이전</button>
+            <button type="button" class="text_hide slide_control" id="slideNext"
+            >다음</button>
+            
+            
+            <div id="slideTimer">
+                <button type="button" class="slide_control_btn play" id="slideStoper">slideStoper</button>
+                <div id="slideTimerBar">
+                    <div id="slideOrangeBar"></div>
+                </div>
+            </div>
+        </div>
+        <div id="notice">
+            <h2>McDonald's LIVE</h2>
+                <ul id="noticeContent">
+                    <li><a href=""><img src="images/1615379165060.png" alt="모두가 해피한 스낵 할인"><span>모두가 해피한 스낵 할인</span></a></li>
+                    <li><a href=""><img src="images/1613634477360.png" alt="7가지 최애버거 맥런치 출시!"><span>7가지 최애버거 맥런치 출시!</span></a></li>
+                    <li><a href=""><img src="images/1613634561992.png" alt="빅맥 스페셜 세트&상하이 버거 스페셜 세트 출시!"><span>빅맥 스페셜 세트&상하이 버거 스페셜 세트 출시!</span></a></li>
+                    <li><a href=""><img src="images/1614165688908.png" alt="갓 구워내 따뜻하고 신선한 베이컨 토마토 에그 머핀!"><span>갓 구워내 따뜻하고 신선한 베이컨 토마토 에그 머핀!</span></a></li>
+                    <li><a href=""><img src="images/1611036026703.png" alt="매일 마시는 커피니까 더 맛있게! 업그레이드된 NEW McCafé®"><span>매일 마시는 커피니까 더 맛있게!업그레이드된 NEW McCafé®</span></a></li>
+                    <li><a href=""><img src="images/1610891466902.png" alt="겨울에 더 달콤한 한잔! 딸기 칠러"><span>겨울에 더 달콤한 한잔!딸기 칠러</span></a></li>
+                    <li class="hide_notice0"><a href=""><img src="images/1602469358284.png" alt="빨대가 필요 없는 뚜껑이를 만나보세요!"><span>빨대가 필요 없는 뚜껑이를 만나보세요!</span></a></li>
+                    <li class="hide_notice0"><a href=""><img src="images/1604569274526.png" alt="맥딜리버리에서 1만 2천원 이상 주문 시 2천 M포인트 사용"><span>맥딜리버리에서 1만 2천원 이상 주문 시 2천 M포인트 사용</span></a></li>
+                    <li class="hide_notice0"><a href=""><img src="images/1604387164267.png" alt="디테일의 차이가 버거의 차이"><span>디테일의 차이가 버거의 차이</span></a></li>
+                    <li class="hide_notice0"><a href=""><img src="images/1615378190645.png" alt="1등급 우유에 퐁당 빠진 바나나"><span>1등급 우유에 퐁당 빠진 바나나</span></a></li>
+                    <li class="hide_notice0"><a href=""><img src="images/1585129454903.png" alt="더 편리해진 맥도날드 앱 사용법"><span>더 편리해진 맥도날드 앱 사용법</span></a></li>
+                    <li class="hide_notice0"><a href=""><img src="images/1614823606500.png" alt="2900원 부터 즐기는 맥모닝 콤보를 만나보세요"><span>2900원 부터 즐기는 맥모닝 콤보를 만나보세요</span></a></li>
+                    <li class="hide_notice1"><a href=""><img src="images/1564052119826.png" alt="농장에서 레스토랑까지 좋은 음식을 제공하기 위한 맥도날드의 노력을 확인하세요!"><span>농장에서 레스토랑까지 좋은 음식을 제공하기 위한 맥도날드의 노력을 확인하세요!</span></a></li>
+                    <li class="hide_notice1"><a href=""><img src="images/1564021259329.png" alt="취향저격 쿠폰부터 쏠쏠한 정보까지! 맥도날드앱 출시!"><span>취향저격 쿠폰부터 쏠쏠한 정보까지! 지금 맥도날드 앱 가입하고 쿠폰받자</span></a></li>
+                    <li class="hide_notice1"><a href=""><img src="images/1562958073127.jpg" alt="맥도날드 주방 공개의 날"><span>맥도날드 버거는 어떻게 만들어질까? 주방은 어떻게 관리되고 있을까?<br /> 전국 매장에서 직접 확인해보세요!</span></a></li>
+                    <li class="hide_notice1"><a href=""><img src="images/1562958303252.jpg" alt="로날드 맥도날드 어린이 축구교실"><span>전문 코치들의 체계적이고 전문적인 교육을 통해 지역사회 행복에 기여합니다</span></a></li>
+                    <li class="hide_notice1"><a href=""><img src="images/1564053803318.png" alt="임차의뢰 신청 - 귀하의 토지, 건물에 맥도날드를 유치하세요"><span>귀하의 토지,건물에 맥도날드를 유치 하세요!</span></a></li>
+                    <li class="hide_notice1 no_effect"></li>
+                </ul>
+            <button type="button" id="noticeViewMore" class="text_hide">공지 더 보기</button>
+            <div id="quickMenu">
+                    <a href="body"><img src="images/btn_delivery_01.png" alt="맥딜리버리"></a>
+                    <a href="#skip"><img src="images/btn_top.png" alt="맨 위로 가기"></a>
+            </div>
+        </div>
+    </section>
+    <footer id="footer">
+        <div class="foot_wrap">
+            <ul id="foot_left">
+                <li><a href="#">개인정보 처리방침</a></li>
+                <li><a href="#">위치정보 이용약관</a></li>
+                <li><a href="#">사이트맵</a></li>
+                <li><a href="#">임차문의</a></li>
+                <li><a href="#">고객문의</a></li>
+                <li><a href="#">인재채용</a></li>
+            </ul>
+            <ul id="foot_mid">
+                <li>한국맥도날드(유)</li>
+                <li>대표이사: 앤토니 마티네즈</li>
+                <li>사업자등록번호: 101-81-26409</li>
+                <li>전화주문: 1600-5252</li>
+                <li>COPYRIGHT © 2019 ALL RIGHTS RESERVED BY McDonald's.</li>
+            </ul>
+            <ul id="sns" class="text_hide">
+                <li><a href="#" class="text_hide">facebook</a></li>
+                <li><a href="#" class="text_hide">instargram</a></li>
+                <li><a href="#" class="text_hide">youtube</a></li>
+                <li><a href="#" class="text_hide">kakaostroy</a></li>
+            </ul>
+            <a href="#"><img src="images/web_accessibility.png" alt="과학기술정보통신부"></a>
+        </div>
+    </footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
