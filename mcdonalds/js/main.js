@@ -73,19 +73,20 @@ $(document).ready(function () {
         });
     };
     slideAction();
-    var autoSlide = setInterval (function () {
+    function auto () {
+        autoSlide = setInterval (function () {
         slideAction();
-        }, 4000);
-    
+        }, 4000)};
+    auto();
     _slideStoper.on('click', function () {
         if ($(this).hasClass('play')) {
-            
             clearInterval(autoSlide);
-            _slideOrangeBar.css({width: 0});
+            _slideOrangeBar.stop().css({width: 0});
             $(this).removeClass('play').addClass('pause');
         } else {
             $(this).removeClass('pause').addClass('play');
-            
+            slideAction();
+            auto();
         }
     });
     // 5] noticeViewMore 클릭시 li 6개씩 더 공개
