@@ -67,7 +67,7 @@ $(document).ready(function () {
     var _slideStoper = $('#slideStoper');
     
     var autoSlide = setInterval (function () {
-        _slideOrangeBar.animate({width: '100%'}, 3000, function () {
+        _slideOrangeBar.animate({width: '100%'}, 8000, function () {
             slideNext();
             _slideOrangeBar.css({width: 0});
         });

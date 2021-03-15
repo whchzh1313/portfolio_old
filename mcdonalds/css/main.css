@@ -231,17 +231,25 @@ body{
 
 #slide{
     position: relative;
-    width: 100%;
+    width: 100vw;
     height: 540px;
     overflow: hidden;
 }
 #slide #slideImg{
-    width: 300%;
+    width: 300vw;
     
 }
 #slide #slideImg li{
     float: left;
 }
+#slide #slideImg li a{
+    display: inline-block;
+    width: 100vw;
+    height: 540px;
+}
+#slide #slideImg li a.slide_1{background: url("../images/1613634424371.png") no-repeat center center;}
+#slide #slideImg li a.slide_2{background: url("../images/1611033752304.png") no-repeat center center;}
+#slide #slideImg li a.slide_3{background: url("../images/1610891347150.png") no-repeat center center;}
 #slide .slide_control{
     position: absolute;
 }
