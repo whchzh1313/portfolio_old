@@ -179,4 +179,15 @@ $(document).ready(function () {
         _filter.children().removeClass('view_page');
         $(this).children().addClass('view_page');
     });
+    
+    $(window).on('keydown', function (e) {
+        
+        console.log(e.keyCode);
+            left = 37
+            right = 39
+        
+       if (e.keyCode === 37 || e.keyCode === 39) {
+           e.preventDefault();
+       }
+    });
 });
