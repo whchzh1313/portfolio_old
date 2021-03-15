@@ -66,20 +66,26 @@ $(document).ready(function () {
     var _slideOrangeBar = $('#slideOrangeBar');
     var _slideStoper = $('#slideStoper');
     
-    var autoSlide = setInterval (function () {
-        _slideOrangeBar.animate({width: '100%'}, 8000, function () {
+    function slideAction () {
+        _slideOrangeBar.animate({width: '100%'}, 4000, function () {
             slideNext();
             _slideOrangeBar.css({width: 0});
         });
-    });
+    };
+    slideAction();
+    var autoSlide = setInterval (function () {
+        slideAction();
+        }, 4000);
     
     _slideStoper.on('click', function () {
         if ($(this).hasClass('play')) {
-            $(this).removeClass('play').addClass('pause');
-            _slideOrangeBar.css({width: 0});
+            
             clearInterval(autoSlide);
+            _slideOrangeBar.css({width: 0});
+            $(this).removeClass('play').addClass('pause');
         } else {
             $(this).removeClass('pause').addClass('play');
+            
         }
     });
     // 5] noticeViewMore 클릭시 li 6개씩 더 공개

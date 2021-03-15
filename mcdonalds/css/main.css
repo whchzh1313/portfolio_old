@@ -241,6 +241,8 @@ body{
 }
 #slide #slideImg li{
     float: left;
+    width: 100vw;
+    height: 540px;
 }
 #slide #slideImg li a{
     display: inline-block;
