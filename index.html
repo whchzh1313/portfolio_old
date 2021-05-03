@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>이화민 포트폴리오</title>
+    <link rel="stylesheet" media="screen and (min-width:1200px)" href="css/main.css" />
+    <link rel="stylesheet" media="screen and (min-width:770px) and (max-width:1199px)" href="css/main_tablet.css" />
+    <link rel="stylesheet" media="screen and (max-width:769px)" href="css/main_mobile.css" />
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/common.css" />
-    <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/load.css" />
-
-    <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+    <title>이화민 포트폴리오</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet" />
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js'></script>
     <script src="js/main.js"></script>
 </head>
@@ -40,9 +41,8 @@
             <h1>Web Publisher<br /><span>Portfolio</span></h1>
             <div class="page1_bg"></div>
             <div class="page1_bg"></div>
-            <p>본 사이트는 chrome 브라우저, 1400px 이상 해상도에 맞춰 제작되었습니다.</p>
         </article>
-        <article id="page2" class="page">
+        <article id="page2" class="page hide_scroll">
             <h2 class="blind">About me page</h2>
             <div class="wrap">
                 <div id="page2_left">
@@ -56,7 +56,8 @@
                     </div>
                     <div id="chara" class="page2_box">
                         <h3>My Character</h3>
-                        <p>업무중 가장 중요하다고 생각하는 것은 <span>피드백</span> 입니다. 피드백은 자신에게 필요하거나 부족한 부분을 고치는데 큰 도움을 준다고 생각합니다. 항상 긍정적인 마인드로 임하겠습니다.</p>
+                        <p>업무중 가장 중요하다고 생각하는 것은 <span>피드백</span> 입니다. 피드백은 자신에게 필요하거나 부족한 부분을 고치는데 큰 도움을 준다고 생각합니다. 항상
+                            긍정적인 마인드로 임하겠습니다.</p>
                         <strong>Positive</strong>
                     </div>
                 </div>
@@ -99,7 +100,7 @@
                                     <div class="dot" id="cir_3_3_dot"></div>
                                 </div>
                                 <div class="cir_3 cir" id="cir_3_4">
-                                    
+
                                 </div>
                             </div>
                             <div id="skill_bar"></div>
@@ -113,18 +114,18 @@
 
                             <div id="skill_txt2" class="skill_txt_hold">
                                 <h4>code</h4>
-                                <p>emmet을 이용하여 HTML 문서를<br /> 빠르게 작성할 수 있습니다.</p>
-                                <p>CSS를 이용하여 레이아웃을 만들어낼 수 있습니다.</p>
-                                <p>javascript 작성을 할 수 있습니다.</p>
-                                <p>jquery와 css를 사용하여 페이지를 유동적으로 만들어 낼 수 있습니다.</p>
+                                <p>emmet을 이용하여 <span>HTML</span> 문서를<br /> 빠르게 작성할 수 있습니다.</p>
+                                <p><span>CSS</span> 를 이용하여 레이아웃을<br /> 만들어낼 수 있습니다.</p>
+                                <p><span>javascript</span> 작성을 할 수 있습니다.</p>
+                                <p><span>jquery</span> 와 css를 사용하여 페이지를<br /> 유동적으로 만들어 낼 수 있습니다.</p>
                                 <p>view.js 스터디 예정입니다.</p>
                             </div>
 
                             <div id="skill_txt3" class="skill_txt_hold">
                                 <h4>design</h4>
-                                <p>photoshop의 유용한 기능을 다양하게 활용하여 이벤트 페이지등을 제작할 수 있습니다.</p>
-                                <p>illustrator로 도형작업 등 디자인에 사용할 수 있습니다.</p>
-                                <p>영상편집의 쉬운기능을 <br />사용할 수 있습니다.</p>
+                                <p><span>photoshop</span> 의 유용한 기능을 다양하게 활용하여 이벤트 페이지등을 제작할 수 있습니다.</p>
+                                <p><span>illustrator</span> 로 도형작업 등 디자인에 사용할 수 있습니다.</p>
+                                <p><span>영상편집</span> 의 기본기능을 <br />사용할 수 있습니다.</p>
                             </div>
 
                         </div>
@@ -133,12 +134,14 @@
             </div>
             <div id="page2_bg"></div>
         </article>
-        <article id="page3" class="page">
+        <article id="page3" class="page hide_scroll">
             <!--             h2.blind+div#pofol$.pofol*4>img+(ul>li)+h3+p+a -->
             <h2 class="blind">Portfolio page</h2>
             <div class="wrap">
                 <div id="pof1" class="pof pof_1 pof_1effect">
-                    <img src="images/wemade.png" alt="위메프 홈페이지" class="pof_left"><!-- 메인이미지 -->
+                    <div class="pof_left">
+                    <img src="images/wemade.png" alt="위메프 홈페이지"><!-- 메인이미지 -->
+                    </div>
                     <div class="pof_right">
                         <div class="pof_right_top">
                             <ul>
@@ -154,7 +157,9 @@
                     </div>
                 </div>
                 <div id="pof2" class="pof pof_2 pof_2effect">
-                    <img src="images/hrd.png" alt="고용노동부 홈페이지" class="pof_left">
+                    <div class="pof_left">
+                        <img src="images/hrd.png" alt="고용노동부 홈페이지">
+                    </div>
                     <div class="pof_right">
                         <div class="pof_right_top">
                             <ul>
@@ -168,7 +173,9 @@
                     </div>
                 </div>
                 <div id="pof3" class="pof pof_hide">
-                    <img src="images/mconald.png" alt="맥도날드" class="pof_left">
+                    <div class="pof_left">
+                        <img src="images/mconald.png" alt="맥도날드">
+                    </div>
                     <div class="pof_right">
                         <div class="pof_right_top">
                             <ul>
@@ -183,7 +190,9 @@
                     </div>
                 </div>
                 <div id="pof4" class="pof pof_hide">
-                    <img src="images/none_page.jpg" alt="해당 페이지는 준비중입니다." class="pof_left">
+                    <div class="pof_left">
+                        <img src="images/none_page.jpg" alt="해당 페이지는 준비중입니다.">
+                    </div>
                     <div class="pof_right">
                         <div class="pof_right_top">
                             <ul>
@@ -217,8 +226,9 @@
                     <a href=""><img src="images/s_rightbtn.png" alt="다음 페이지"></a>
                 </div>
             </div>
+            <div id="page3_bg"></div>
         </article>
-        <article id="page4" class="page">
+        <article id="page4" class="page hide_scroll">
             <h2 class="blind">Design page</h2>
             <div class="wrap">
                 <div id="filter">
@@ -232,28 +242,34 @@
                 <div id="gallery">
                     <ul>
                         <li class="gal_content gal_design"><img src="images/page4/design_01.png" alt="삼성 갤럭시"></li>
-                        <li class="gal_content gal_design"><img src="images/page4/design_02.jpg" alt="2020 코리아 세일 페스타"></li>
+                        <li class="gal_content gal_design"><img src="images/page4/design_02.png" alt="2020 코리아 세일 페스타">
+                        </li>
                         <li class="gal_content gal_event"><img src="images/page4/event_01.png" alt="쿠폰"></li>
                         <li class="gal_content gal_event gal_mr"><img src="images/page4/event_02.png" alt="성형외과"></li>
-                        <li class="gal_content gal_banner"><img src="images/page4/banner_03.png" alt="가장 가깝고 거대한 오븐 Tres tot"></li>
+                        <li class="gal_content gal_banner"><img src="images/page4/banner_03.png"
+                                alt="가장 가깝고 거대한 오븐 Tres tot"></li>
                         <li class="gal_content gal_event"><img src="images/page4/event_03.png" alt="혜택의 끝판왕"></li>
                         <li class="gal_content gal_event"><img src="images/page4/event_07.png" alt="쿠폰"></li>
-                        <li class="gal_content gal_design gal_mr"><img src="images/page4/design_04.jpg" alt="sns 디자인"></li>
-                        <li class="gal_content gal_design"><img src="images/page4/design_05.jpg" alt="sns 디자인2"></li>
-                        <li class="gal_content gal_design"><img src="images/page4/design_03.jpg" alt="신세계몰"></li>
+                        <li class="gal_content gal_design gal_mr"><img src="images/page4/design_04.png" alt="sns 디자인">
+                        </li>
+                        <li class="gal_content gal_design"><img src="images/page4/design_05.png" alt="sns 디자인2"></li>
+                        <li class="gal_content gal_design"><img src="images/page4/design_03.png" alt="신세계몰"></li>
                         <li class="gal_content gal_event"><img src="images/page4/event_04.png" alt="믿고보는 내돈내산"></li>
                         <li class="gal_content gal_event"><img src="images/page4/event_06.png" alt="70% 아리따움 아울렛"></li>
                         <li class="gal_content gal_event"><img src="images/page4/event_05.png" alt="앱다운 적립금"></li>
-                        <li class="gal_content gal_banner"><img src="images/page4/banner_01.png" alt="트윈 크레페 피자 주문시 도미노 50% 할인">
+                        <li class="gal_content gal_banner"><img src="images/page4/banner_01.png"
+                                alt="트윈 크레페 피자 주문시 도미노 50% 할인">
                         </li>
-                        <li class="gal_content gal_banner"><img src="images/page4/banner_02.png" alt="꿀 연휴를 부탁해! 매일 오전 11시 꿀 혜택 쿠폰">
+                        <li class="gal_content gal_banner"><img src="images/page4/banner_02.png"
+                                alt="꿀 연휴를 부탁해! 매일 오전 11시 꿀 혜택 쿠폰">
                         </li>
-                        <li class="gal_content gal_event"><img src="images/page4/event_08.png" alt="최대 1만원 할인을 너에게로 토스"></li>
+                        <li class="gal_content gal_event"><img src="images/page4/event_08.png" alt="최대 1만원 할인을 너에게로 토스">
+                        </li>
                     </ul>
                 </div>
             </div>
         </article>
-        <article id="page5" class="page">
+        <article id="page5" class="page hide_scroll">
             <h2 class="blind">Contact page</h2>
             <div id="contact_txt">
                 <div id="contact_txt_inner">

@@ -1,9 +1,0 @@
-발견한 문제
-키보드 로 좌우 이동시 화면 망가짐
-filter 첫번째 클릭시 안사라짐
-resize 이벤트
-맥도날드
-li 숫자 늘릴시 position fixed 망가짐
-slide 안멈춤
-
-8.89

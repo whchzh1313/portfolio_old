@@ -16,3 +16,20 @@ body *{
     overflow: hidden;
     border: none;
 }
+.hide_scroll{
+    display: none;
+}
+#bigImg{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, .7);
+    z-index: 1000;
+}
+#bigImg img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-height: 100vh;
+}
