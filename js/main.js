@@ -192,7 +192,7 @@ $(document).ready(function () {
         console.log($(this).children().attr("src").slice(0, -4));
         console.log('<div id="bigImg">'+'<img src="'+$(this).children().attr("src").slice(0, -4+"_b"+$(this).children().attr("src").slice(-4)+'" alt="">'+'</div>'); */
         $('#section').after(
-            '<div id="bigImg">'+'<img src="'+$(this).children().attr("src").slice(0, -4)+"_b"+(this).children().attr("src").slice(-4)+'" alt="">'+'</div>'
+            '<div id="bigImg">'+'<img src="'+$(this).children().attr("src").slice(0, -4)+"_b"+$(this).children().attr("src").slice(-4)+'" alt="">'+'</div>'
         );
         // bigImg 변수저장
         var _bigImg = $('#bigImg');
