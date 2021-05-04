@@ -568,7 +568,6 @@ nav>ul>li>a {
 
 #page3 .pof_1 .pof_right{
     width: 72vw;
-    height: 500px;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -605,6 +604,7 @@ nav>ul>li>a {
 #page3 .pof_1 .pof_right .pof_right_bottom{
     width: 200px;
     height: 40px;
+    margin-top: 20px;
     font-size: 24px;
     color: #fff;
     background: #ffa629;
