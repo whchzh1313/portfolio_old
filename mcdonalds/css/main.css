@@ -236,23 +236,12 @@ body{
     overflow: hidden;
 }
 #slide #slideImg{
-    width: 300vw;
-    height: 540px;
+    width: 300%;
     
 }
 #slide #slideImg li{
     float: left;
-    width: 33.33333%;
-    height: 540px;
 }
-#slide #slideImg li a{
-    display: block;
-    width: 100%;
-    height: 540px;
-}
-#slide #slideImg li a.slide_1{background: url("../images/1613634424371.png") no-repeat;}
-#slide #slideImg li a.slide_2{background: url("../images/1611033752304.png") no-repeat;}
-#slide #slideImg li a.slide_3{background: url("../images/1610891347150.png") no-repeat;}
 #slide .slide_control{
     position: absolute;
 }

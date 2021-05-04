@@ -13,7 +13,6 @@ body{
 }
 section {
     position: relative;
-    width: 500vw;
     z-index: -1000;
 }
 
@@ -186,13 +185,12 @@ nav>ul>li>a {
 
 #page2 {
     padding-top: 140px;
-    height: 1400px;
+    height: 1800px;
     background: #fff7dd;
 }
 
 #page2 .wrap {
     width: 86vw;
-    min-width: 770px;
     height: 730px;
     margin: 0 auto;
 }

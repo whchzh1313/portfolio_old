@@ -186,36 +186,26 @@ $(document).ready(function () {
     });
 
     // 5] page4 이미지 클릭시 큰 이미지 보기, 보기 종료
-    _gallery.find('.gal_content').on('click', function () {
-        /* console.log($(this).children().attr("src"));
-        console.log($(this).children().attr("src").slice(-4));
-        console.log($(this).children().attr("src").slice(0, -4));
-        console.log('<div id="bigImg">'+'<img src="'+$(this).children().attr("src").slice(0, -4+"_b"+$(this).children().attr("src").slice(-4)+'" alt="">'+'</div>'); */
-        $('#section').after(
-            '<div id="bigImg">'+'<img src="'+$(this).children().attr("src").slice(0, -4)+"_b"+$(this).children().attr("src").slice(-4)+'" alt="">'+'</div>'
-        );
-        // bigImg 변수저장
-        var _bigImg = $('#bigImg');
-        _bigImg.on('click', function () {
-            $(this).remove();
+        _gallery.find('.gal_content').on('click', function () {
+            /* console.log($(this).children().attr("src"));
+            console.log($(this).children().attr("src").slice(-4));
+            console.log($(this).children().attr("src").slice(0, -4));
+            console.log('<div id="bigImg">'+'<img src="'+$(this).children().attr("src").slice(0, -4)+"_b"+$(this).children().attr("src").slice(-4)+'" alt="">'+'</div>'); */
+            $('#section').after(
+                '<div id="bigImg">'+'<img src="'+$(this).children().attr("src").slice(0, -4)+"_b"+$(this).children().attr("src").slice(-4)+'" alt="">'+'</div>'
+            );
+            // bigImg 변수저장
+            var _bigImg = $('#bigImg');
+
+            _bigImg.on('click', function () {
+                $(this).remove();
+            });
+            
+            $(document).on('keydown', function (e) {
+                console.log(e.keyCode);
+                if (e.keyCode == 27) {
+                    _bigImg.remove();
+                }
+            });
         });
-        
-        $(document).on('keydown', function (e) {
-            console.log(e.keyCode);
-            if (e.keyCode == 27) {
-                _bigImg.remove();
-            }
-        });
-    });
-    
-    $(window).on('keydown', function (e) {
-        
-        console.log(e.keyCode);
-            left = 37
-            right = 39
-        
-       if (e.keyCode === 37 || e.keyCode === 39) {
-           e.preventDefault();
-       }
-    });
 });
